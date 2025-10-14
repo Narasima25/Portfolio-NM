@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Portfolio Generator</h1>
+        <button id="downloadBtn">Download Portfolio HTML</button>
+    </header>
+
+    <div class="main-layout">
+        <div id="input-panel">
+            <h2>Customize Your Portfolio</h2>
+
+            <section class="input-section">
+                <h3>Personal Info</h3>
+                <label for="nameInput">Name:</label>
+                <input type="text" id="nameInput" value="Jane Doe" oninput="generatePortfolio()">
+
+                <label for="titleInput">Title/Role:</label>
+                <input type="text" id="titleInput" value="Front-End Developer" oninput="generatePortfolio()">
+
+                <label for="profileImgInput">Profile Image URL:</label>
+                <input type="url" id="profileImgInput" value="https://via.placeholder.com/150" oninput="generatePortfolio()">
+                
+                <label for="bioInput">Short Bio:</label>
+                <textarea id="bioInput" oninput="generatePortfolio()">A passionate developer specializing in creating dynamic and user-friendly web applications with a focus on clean, scalable code.</textarea>
+            </section>
+
+            <section class="input-section">
+                <h3>Skills</h3>
+                <label for="skillsInput">Skills (Comma-separated, e.g., HTML, CSS, JS):</label>
+                <input type="text" id="skillsInput" value="HTML, CSS, JavaScript, React, Git, Figma, Bootstrap" oninput="generatePortfolio()">
+            </section>
+
+            <section class="input-section">
+                <h3>Main Project</h3>
+                <label for="projectTitle">Project Title:</label>
+                <input type="text" id="projectTitle" value="Simple To-Do App" oninput="generatePortfolio()">
+
+                <label for="projectDesc">Project Description:</label>
+                <textarea id="projectDesc" oninput="generatePortfolio()">A dynamic task manager built with vanilla JavaScript, demonstrating proficiency in DOM manipulation and browser Local Storage.</textarea>
+
+                <label for="projectLink">Live Link (URL):</label>
+                <input type="url" id="projectLink" value="#" oninput="generatePortfolio()">
+            </section>
+
+            <section class="input-section">
+                <h3>Contact Info</h3>
+                <label for="emailInput">Email:</label>
+                <input type="text" id="emailInput" value="yourname@example.com" oninput="generatePortfolio()">
+
+                <label for="linkedinInput">LinkedIn URL:</label>
+                <input type="url" id="linkedinInput" value="https://linkedin.com/in/yourprofile" oninput="generatePortfolio()">
+
+                <label for="githubInput">GitHub URL:</label>
+                <input type="url" id="githubInput" value="https://github.com/yourusername" oninput="generatePortfolio()">
+            </section>
+        </div>
+
+        <div id="preview-panel">
+            <h2>Live Portfolio Preview</h2>
+            <div id="portfolio-output">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
